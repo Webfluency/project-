@@ -1,4 +1,42 @@
-/* main css style sheet */
-header  {
-	background-color: blue;
-		}
+/* styles for navigation */
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+    border: 2px solid white;    
+	float: left;
+}
+#nav_menu ul li a {
+    display: block;
+    width: 160px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color:blue;
+    color: white;
+    font-weight: bold;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+
+#nav_menu a.current {
+	background-color:black;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
